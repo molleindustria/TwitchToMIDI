@@ -21,16 +21,17 @@ TwitchPlaysMIDI was created for [TwitchPlaysBees](https://vimeo.com/439416461). 
 
 *Traditionally* Twitch-plays games run on dedicated machines that are streaming the output of the game through [OBS](https://obsproject.com/) or other applications. This program listens to Twitch chat messages and interprets them as MIDI input on your computer. A Twitch chat mostly functions like an IRC channel, so your bot can both receive or send text messages. You need some familiarity with MIDI configuration to set this up.
 
-1. Add your Twitch credentials to Bot.pde.
-2. Install The MidiBus and Ani libraries from Processing with [Add Library...](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
-3. Set up your virtual MIDI bus/port. On Window you will need a Virtual Midi Cable program like [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) (launch, add port with the +). On Mac you need to follow these [instructions](https://help.ableton.com/hc/en-us/articles/209774225-How-to-setup-a-virtual-MIDI-bus)
-4. Run the sketch check the list of MIDI device and replace "loopMIDI Port" in TwitchToMidi.pde with the device you want to use.
-5. Set up your music making program (DAW) and map the controls you want to expose to remote MIDI. This configuration depends on the application. Examples: [Ableton Live](https://help.ableton.com/hc/en-us/articles/360000038859-Making-custom-MIDI-Mappings), [FL Studio](https://www.youtube.com/watch?v=MtcZ2_6IG4c)...
-6. In TwitchPlaysMidi.pde add your own chat commands and related MIDI controllers in the arraylist "controllers"
-7. Test the Twitch to MIDI communication first and then the MIDI to DAW communication. You don't have to be live on Twitch to test the chat functionalities, just open your offline channel and type in the chat.
-8. Start streaming 
-9. ???
-10. Profit!
+1. Open in Processing and make sure that the whole project is in a folder named TwitchPlaysMidi (not TwitchPlaysMidi-master).
+2. Add your Twitch credentials to Bot.pde.
+3. Install The MidiBus and Ani libraries from Processing with [Add Library...](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
+4. Set up your virtual MIDI bus/port. On Window you will need a Virtual Midi Cable program like [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) (launch, add port with the +). On Mac you need to follow these [instructions](https://help.ableton.com/hc/en-us/articles/209774225-How-to-setup-a-virtual-MIDI-bus)
+5. Run the sketch check the list of MIDI device and replace "loopMIDI Port" in TwitchToMidi.pde with the device you want to use.
+6. Set up your music making program (DAW) and map the controls you want to expose to remote MIDI. This configuration depends on the application. Examples: [Ableton Live](https://help.ableton.com/hc/en-us/articles/360000038859-Making-custom-MIDI-Mappings), [FL Studio](https://www.youtube.com/watch?v=MtcZ2_6IG4c)...
+7. In TwitchPlaysMidi.pde add your own chat commands and related MIDI controllers in the arraylist "controllers"
+8. Test the Twitch to MIDI communication first and then the MIDI to DAW communication. You don't have to be live on Twitch to test the chat functionalities, just open your offline channel and type in the chat.
+9. Start streaming 
+10. ???
+11. Profit!
 
 
 # Notes
