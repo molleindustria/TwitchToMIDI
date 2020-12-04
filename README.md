@@ -35,6 +35,8 @@ TwitchPlaysMIDI was created for [TwitchPlaysBees](https://vimeo.com/439416461). 
 
 # Notes
 
+* if "irc.twitch.tv" in Bot.pde doesn't work try "irc.chat.twitch.tv"
+
 * This program doesn't create any music, it only produces MIDI inputs emulating a keyboard or a controller. You will need a MIDI-enabled digital audio workstation like Ableton Live, Garage Band, or FL Studio to turn notes into sound. 
 
 * On Twitch there is a lag of a couple of seconds between video and chat, don't expect users to be in sync or to make meaningful compositions. TwitchPlaysMIDI is probably more appropriate for hybrid performances in which users contribute to a live set, slow ambient pieces, or generative music.
