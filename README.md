@@ -22,7 +22,7 @@ TwitchPlaysMIDI was created for [TwitchPlaysBees](https://vimeo.com/439416461). 
 *Traditionally* Twitch-plays games run on dedicated machines that are streaming the output of the game through [OBS](https://obsproject.com/) or other applications. This program listens to Twitch chat messages and interprets them as MIDI input on your computer. A Twitch chat mostly functions like an IRC channel, so your bot can both receive or send text messages. You need some familiarity with MIDI configuration to set this up.
 
 1. Open in Processing and make sure that the whole project is in a folder named TwitchPlaysMidi (not TwitchPlaysMidi-master).
-2. Add your Twitch credentials to Bot.pde.
+2. Add your Twitch credentials to Bot.pde. If "irc.twitch.tv" in Bot.pde doesn't work try "irc.chat.twitch.tv"
 3. Install The MidiBus and Ani libraries from Processing with [Add Library...](https://github.com/processing/processing/wiki/How-to-Install-a-Contributed-Library)
 4. Set up your virtual MIDI bus/port. On Window you will need a Virtual Midi Cable program like [loopMIDI](https://www.tobias-erichsen.de/software/loopmidi.html) (launch, add port with the +). On Mac you need to follow these [instructions](https://help.ableton.com/hc/en-us/articles/209774225-How-to-setup-a-virtual-MIDI-bus)
 5. Run the sketch check the list of MIDI device and replace "loopMIDI Port" in TwitchToMidi.pde with the device you want to use.
@@ -35,8 +35,6 @@ TwitchPlaysMIDI was created for [TwitchPlaysBees](https://vimeo.com/439416461). 
 
 
 # Notes
-
-* if "irc.twitch.tv" in Bot.pde doesn't work try "irc.chat.twitch.tv"
 
 * This program doesn't create any music, it only produces MIDI inputs emulating a keyboard or a controller. You will need a MIDI-enabled digital audio workstation like Ableton Live, Garage Band, or FL Studio to turn notes into sound. 
 
