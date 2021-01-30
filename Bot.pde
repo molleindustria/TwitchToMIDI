@@ -12,8 +12,8 @@ public class Bot extends PircBot {
   //This is NOT the streaming code
   String twitchOauth = "your Oauth";
 
-  //set to false and restart the bot after you see the 'Successfully connected!' message in your twitch chat!
-  //otherwise everytime someone joins the stream the message will be send
+  //set to false if you don't want to see the 'Successfully connected!' message in your channels chat
+  //you have to have you channel page/chat open when you start the bot to see the message
   String joinMessage = "true";
   
   //-----End of config ------------------------------------------------------------------------------------------------------------------------------------
@@ -56,10 +56,13 @@ public class Bot extends PircBot {
     //sendMessage(channel,"Welcome "+login+"!");
   }
   
+  Integer nx = 0;
+  
   public void onJoin(String channel, String sender, String login, String hostname) {
         
-    if (joinMessage == "true") {
+    if (nx == 0 && joinMessage == "true") {
       sendMessage(channel, "Successfully connected!");
+      nx = nx + 1;
     }
   }
 }
