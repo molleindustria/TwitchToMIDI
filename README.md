@@ -31,26 +31,28 @@ Also check if the bot puts the "succesfully connected" message in your stream ch
 6. In TwitchPlaysMidi.pde add your own chat commands and related MIDI controllers in the arraylist "controllers"
 * *Trigger*  
   
-Code: triggers.add(new Trigger("[CommandName]", "[note]")); 
-  
-*[CommandName]* - the exact phrase that when put in the chat should trigger the MIDI (you have to add *!* infront of it if you want it to look like a chatbot command)  
-*[note]* - the MIDI not you want to be send
-
-*Example:* triggers.add(new Trigger("dropBass", "C4"));  
-If **dropBass** is send in chat the MIDI note C4 will be send to your DAW and trigger that note on your current instrument
-
+> Code: ```triggers.add(new Trigger("[CommandName]", "[note]"));``` 
+>   
+> *[CommandName]* - the exact phrase that when put in the chat should trigger the MIDI (you have to add *!* infront of it if you want it to look like a chatbot command)  
+> *[note]* - the MIDI not you want to be send
+> 
+> *Example:* ```triggers.add(new Trigger("dropBass", "C4"));```  
+> If **dropBass** is send in chat the MIDI note C4 will be send to your DAW and trigger that note on your current instrument
+> 
 * *Slider*  
   
-Code: controllers.add(new Slider("[CommandName]", [channel], [minValue], [maxValue]));  
-  
-*[CommandName]* - the exact phrase that when put in the chat should trigger the MIDI (you have to add *!* infront of it if you want it to look like a chatbot command)  
-*[channel]* - the coresponding channel for the setup as a number from 0 upwords (see below)  
-*[minValue]* - the smalles value this slider should be allowed to be set to between 0-100 (it wont go lower than this value or 0)  
-*[maxValue]* - the largest value this slider should be allowed to be set to between 0-100 (it wont go highter than this value or 100)  
-  
-*Example:* controllers.add(new Slider("!delay", 0, 0, 25));  
-If **!delay 20 2** is send in chat the according Slider will be set to a value 20 over the cause of 2 seconds  
-If **!delay 30 5** is send in chat the according Slider will be set to a value 25 over the cause of 5 seconds (because of the set maximum value)
+> Code: ```controllers.add(new Slider("[CommandName]", [channel], [minValue], [maxValue]));```  
+>   
+> *[CommandName]* - the exact phrase that when put in the chat should trigger the MIDI (you have to add *!* infront of it if you want it to look like a chatbot command)  
+> *[channel]* - the coresponding channel for the setup as a number from 0 upwords (see below)  
+> *[minValue]* - the smalles value this slider should be allowed to be set to between 0-100 (it wont go lower than this value or 0)  
+> *[maxValue]* - the largest value this slider should be allowed to be set to between 0-100 (it wont go highter than this value or 100)  
+>   
+> If no *[minValue]* & *[maxValue]* is set it will be 0 & 100 respectively  
+>   
+> *Example:* ```controllers.add(new Slider("!delay", 0, 0, 25));```  
+> If **!delay 20 2** is send in chat the according Slider will be set to a value 20 over the cause of 2 seconds  
+> If **!delay 30 5** is send in chat the according Slider will be set to a value 25 over the cause of 5 seconds (because of the set maximum value)
 
 7. Set up your music making program (DAW) and map the controls you want to expose to remote MIDI. This configuration depends on the application. Examples: [Ableton Live](https://help.ableton.com/hc/en-us/articles/360000038859-Making-custom-MIDI-Mappings), [FL Studio](https://www.youtube.com/watch?v=MtcZ2_6IG4c)...  
 Setting up:  
